@@ -4,19 +4,23 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int radius;
+        double principal;
+        double rate;
+        int timesCompounded;
+        int years;
+        double amount;
 
-        System.out.print("Enter the radius of the circle: ");
-        radius = sc.nextInt();
+        System.out.print("Enter the principal amount: ");
+        principal = sc.nextDouble();
+        System.out.print("Enter the annual interest rate (in %): ");
+        rate = sc.nextDouble() / 100;
+        System.out.print("Enter the # of times compounded per year: ");
+        timesCompounded = sc.nextInt();
+        System.out.print("Enter the # of years: ");
+        years = sc.nextInt();
 
-        double circumference = 2 * Math.PI * radius;
-        double area = Math.PI * radius * radius;
-        double volume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
-
-        System.out.printf("The circumference of the circle is: %.1fcm%n", circumference);
-        System.out.printf("The area of the circle is: %.1fcm²%n", area);
-        System.out.printf("The volume of the sphere is: %.1fcm³%n", volume);
-
+        amount = principal * Math.pow((1 + rate / timesCompounded), timesCompounded * years);
+        System.out.println("The amount after " + years + " years is: $" + amount);
         sc.close();
     }
 }
