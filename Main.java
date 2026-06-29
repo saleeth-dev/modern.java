@@ -2,19 +2,24 @@
 public class Main {
     public static void main(String[] args) {
 
-        // ternary operator 1
-        int score = 55;
-        String passOrFail = (score >= 60) ? "Pass" : "Fail";
-        System.out.println("Result: " + passOrFail);
+        String day = "Friday";
 
-        // ternary operator 2
-        int number = 3;
-        String evenOrOdd = (number % 2 == 0) ? "EVEN" : "ODD";
-        System.out.println("The number is: " + evenOrOdd);
-
-        // ternary operator 3
-        int hours = 13;
-        String timeOfDay = (hours < 12) ? "A.M." : "P.M.";
-        System.out.println("Time of day: " + timeOfDay);
+        if(day.equals("Monday")) {
+            System.out.println("Today is Monday");
+        } else if(day.equals("Tuesday")) {
+            System.out.println("Today is Tuesday");
+        } else if(day.equals("Wednesday")) {
+            System.out.println("Today is Wednesday");
+        } else if(day.equals("Thursday")) {
+            System.out.println("Today is Thursday");
+        } else if(day.equals("Friday")) {
+            System.out.println("Today is Friday");
+        } else if(day.equals("Saturday")) {
+            System.out.println("Today is Saturday");
+        } else if(day.equals("Sunday")) {
+            System.out.println("Today is Weekend");
+        } else {
+            System.out.println("Invalid day");
+        }
     }
 }
