@@ -1,26 +1,20 @@
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        double principal;
-        double rate;
-        int timesCompounded;
-        int years;
-        double amount;
+        // ternary operator 1
+        int score = 55;
+        String passOrFail = (score >= 60) ? "Pass" : "Fail";
+        System.out.println("Result: " + passOrFail);
 
-        System.out.print("Enter the principal amount: ");
-        principal = sc.nextDouble();
-        System.out.print("Enter the annual interest rate (in %): ");
-        rate = sc.nextDouble() / 100;
-        System.out.print("Enter the # of times compounded per year: ");
-        timesCompounded = sc.nextInt();
-        System.out.print("Enter the # of years: ");
-        years = sc.nextInt();
+        // ternary operator 2
+        int number = 3;
+        String evenOrOdd = (number % 2 == 0) ? "EVEN" : "ODD";
+        System.out.println("The number is: " + evenOrOdd);
 
-        amount = principal * Math.pow((1 + rate / timesCompounded), timesCompounded * years);
-        System.out.println("The amount after " + years + " years is: $" + amount);
-        sc.close();
+        // ternary operator 3
+        int hours = 13;
+        String timeOfDay = (hours < 12) ? "A.M." : "P.M.";
+        System.out.println("Time of day: " + timeOfDay);
     }
 }
