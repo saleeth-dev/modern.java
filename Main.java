@@ -1,21 +1,24 @@
-import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) throws InterruptedException{
+public class Main{
+    public static void main(String[] args){
 
-        Scanner sc = new Scanner(System.in);
+        String fullName = getFullName("John", "Doe");
+        System.out.println("FullName is " + fullName);
+        
+    }
 
-        System.out.println("How many seconds to countdown from?: ");
-        int start = sc.nextInt();
-
-        for(int i = start; i > 0; i--){
-            System.out.println(i);
-            Thread.sleep(1000);
+        static void happyBirthday(String name, int age) {
+            System.out.println("Happy Birthday to you!");
+            System.out.printf("Happy Birthday %s Your age is now %d\n", name, age);
+            System.out.printf("Happy Birthday dear %s\n ", name);
+            System.out.println("Happy Birthday to you!\n");
+        }
+        static double square(double number) {
+            return number * number;
+        }
+        static String getFullName(String firstName, String lastName) {
+            return firstName + " " + lastName;
         }
 
-        System.out.println("HAPPY NEW YEAR");
-
-        sc.close();
-
-    }
 }
+
