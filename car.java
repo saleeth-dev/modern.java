@@ -1,14 +1,44 @@
 public class car {
-    String make = "Ford";
-    String model = "Mustang";
-    int year = 2025;
-    double price = 55000.00;
-    boolean isElectric = false;
+    String name;
+    int age;
+    String email;
+    double salary;
+    char gender;
+    float height;
 
-    void start() {
-        System.out.println("The start the engine");
-    }
-    void stop() {
-        System.out.println("The stop the engine");
-    }
+
+car(String name, int age){
+    this.name = name;
+    this.age = age;
+}
+
+car(String name, int age, String email){
+    this.name = name;
+    this.age = age;
+    this.email = email;
+}
+
+car(String name, int age, String email, double salary){
+    this.name = name;
+    this.age = age;
+    this.email = email;
+    this.salary = salary;
+}
+
+car(String name, int age, String email, double salary, char gender){
+    this.name = name;
+    this.age = age;
+    this.email = email;
+    this.salary = salary;
+    this.gender = gender;
+}
+
+car(String name, int age, String email, double salary, char gender, float height){
+    this.name = name;
+    this.age = age;
+    this.email = email;
+    this.salary = salary;
+    this.gender = gender;
+    this.height = height;
+}
 }
